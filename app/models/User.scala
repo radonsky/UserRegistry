@@ -81,6 +81,8 @@ object User {
 //    (u: User) => (u.id.toOption, u.name, u.email, u.phone, u.address)
 //  )
   
+  import AddressFormat._
+  
   implicit val format: Format[User] = (
     (__ \ "id").formatNullable[Long] and  
     (__ \ "name").format[String] and
